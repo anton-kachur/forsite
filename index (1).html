@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планети</title>
+    <style>
+        /* Основний стиль для сторінки */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        header .menu-icon img {
+            width: 30px;
+            height: 30px;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header ul li {
+            margin: 0 10px;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        header ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Сховати меню для мобільної версії */
+        @media (max-width: 600px) {
+            header ul {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+            }
+
+            header ul.active {
+                display: flex;
+            }
+
+            header .menu-icon {
+                display: block;
+            }
+        }
+
+        /* Основний контент */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Хедер -->
+    <header>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <img src="menu.png" alt="Меню">
+            </div>
+            <ul>
+                <li><a href="kosmos.html">Головна</a></li>
+                <li><a href="index.html">Планети</a></li>
+                <li><a href="the.html">Зорі</a></li>
+                <li><a href="pro.html">Про проєкт</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основний контент -->
+    <main>
+        <h1>Сонячна система</h1>
+        <p>Вітаємо на сайті, присвяченому планетам та іншим об’єктам Сонячної системи!</p>
+        <section id="planets">
+            <h2>Планета Сатурн</h2>
+            <img src="https://ganok.in.ua/wp-content/uploads/%D0%A1%D0%B0%D1%82%D1%83%D1%80%D0%BD-%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D0%B5%D0%BB%D1%8C-%D1%81%D1%83%D0%B1%D0%BE%D1%82%D0%B8-696x416.jpg" alt="Сатурн">
+            <p>Сатурн — шоста планета від Сонця та друга за розміром у Сонячній системі після Юпітера.</p>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        Будемо раді бачити вас ще
+    </footer>
+
+    <!-- JavaScript для випадаючого меню -->
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('header ul');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
